@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FraudShield AI — Document Fraud Detection</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-icon">
+          <span class="logo-shield">⬡</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-main">FraudShield</span>
+          <span class="logo-ai">AI</span>
+        </div>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#dashboard" class="nav-link" data-section="dashboard">Dashboard</a></li>
+        <li><a href="#verify" class="nav-link" data-section="verify">Verify</a></li>
+        <li><a href="#results" class="nav-link" data-section="results">Results</a></li>
+        <li><a href="#templates" class="nav-link" data-section="templates">Templates</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="nav-status">
+          <span class="status-dot"></span>
+          <span class="status-text">System Online</span>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="scan-line"></div>
+    </div>
+
+    <div class="hero-content reveal">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Government Grade · AI Forensics · v3.7.2</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-line-1">FraudShield</span>
+        <span class="title-line-2">AI</span>
+      </h1>
+
+      <p class="hero-subtitle">AI-Powered Government Document Verification & Forgery Detection</p>
+
+      <p class="hero-desc">
+        Protecting welfare scheme integrity through multi-layer forensic analysis of caste certificates,
+        income certificates, degree certificates, marksheets and domicile documents — powered by deep neural networks
+        and metadata validation pipelines.
+      </p>
+
+      <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-num">99.2%</span>
+          <span class="hstat-label">Detection Accuracy</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <span class="hstat-num">&lt;3s</span>
+          <span class="hstat-label">Avg. Scan Time</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <span class="hstat-num">14</span>
+          <span class="hstat-label">Doc Templates</span>
+        </div>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#verify" class="btn btn-primary">
+          <span class="btn-icon">◈</span>
+          Verify Document
+        </a>
+        <a href="#dashboard" class="btn btn-secondary">
+          <span class="btn-icon">◉</span>
+          View Dashboard
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="doc-frame">
+        <div class="doc-header">
+          <div class="doc-badge">CLASSIFIED</div>
+          <div class="doc-lines">
+            <div class="doc-line"></div>
+            <div class="doc-line short"></div>
+          </div>
+        </div>
+        <div class="doc-scan-area">
+          <div class="scan-beam"></div>
+          <div class="scan-grid">
+            <div class="sgrid-row" style="--d:0"></div>
+            <div class="sgrid-row" style="--d:1"></div>
+            <div class="sgrid-row" style="--d:2"></div>
+            <div class="sgrid-row" style="--d:3"></div>
+            <div class="sgrid-row" style="--d:4"></div>
+          </div>
+          <div class="doc-seal">
+            <div class="seal-ring outer"></div>
+            <div class="seal-ring inner"></div>
+            <div class="seal-core">GOI</div>
+          </div>
+        </div>
+        <div class="doc-footer-area">
+          <div class="doc-result authentic">
+            <span>●</span> AUTHENTIC VERIFIED
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DASHBOARD ═══ -->
+  <section class="dashboard section" id="dashboard">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Real-Time Analytics</div>
+        <h2 class="section-title">Operational Dashboard</h2>
+        <p class="section-desc">Live forensic intelligence and document verification metrics</p>
+      </div>
+
+      <div class="stats-grid reveal">
+        <div class="stat-card" data-color="blue">
+          <div class="stat-icon-wrap blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="stat-info">
+            <div class="stat-number" data-target="124">0</div>
+            <div class="stat-label">Documents Verified</div>
+          </div>
+          <div class="stat-trend up">↑ 12%</div>
+          <div class="stat-glow blue-glow"></div>
+        </div>
+
+        <div class="stat-card" data-color="red">
+          <div class="stat-icon-wrap red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="stat-info">
+            <div class="stat-number" data-target="18">0</div>
+            <div class="stat-label">Frauds Detected</div>
+          </div>
+          <div class="stat-trend down">↑ 3%</div>
+          <div class="stat-glow red-glow"></div>
+        </div>
+
+        <div class="stat-card" data-color="orange">
+          <div class="stat-icon-wrap orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="stat-info">
+            <div class="stat-number" data-target="7">0</div>
+            <div class="stat-label">Pending Reviews</div>
+          </div>
+          <div class="stat-trend neutral">— 0%</div>
+          <div class="stat-glow orange-glow"></div>
+        </div>
+
+        <div class="stat-card" data-color="green">
+          <div class="stat-icon-wrap green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <div class="stat-info">
+            <div class="stat-number" data-target="14">0</div>
+            <div class="stat-label">Templates Available</div>
+          </div>
+          <div class="stat-trend up">↑ 2</div>
+          <div class="stat-glow green-glow"></div>
+        </div>
+      </div>
+
+      <div class="activity-panel reveal">
+        <div class="panel-header">
+          <h3>Recent Activity</h3>
+          <div class="live-badge"><span class="live-dot"></span>LIVE</div>
+        </div>
+        <div class="activity-list">
+          <div class="activity-item risk-ok">
+            <div class="activity-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="activity-details">
+              <span class="activity-name">10th Marksheet — CBSE · Roll: 19129027</span>
+              <span class="activity-time">1 minute ago · Board: CBSE · Score: 100%</span>
+            </div>
+            <div class="activity-badge success">Verified</div>
+          </div>
+
+          <div class="activity-item risk-high">
+            <div class="activity-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <div class="activity-details">
+              <span class="activity-name">Income Certificate — MH-2024-IC-00847</span>
+              <span class="activity-time">2 minutes ago · District: Nashik</span>
+            </div>
+            <div class="activity-badge danger">High Risk</div>
+          </div>
+
+          <div class="activity-item risk-ok">
+            <div class="activity-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="activity-details">
+              <span class="activity-name">Degree Certificate — AU-2024-DC-01123</span>
+              <span class="activity-time">14 minutes ago · University: Amravati</span>
+            </div>
+            <div class="activity-badge success">Verified</div>
+          </div>
+
+          <div class="activity-item risk-medium">
+            <div class="activity-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="activity-details">
+              <span class="activity-name">Caste Certificate — GJ-2024-CC-00391</span>
+              <span class="activity-time">31 minutes ago · District: Surat</span>
+            </div>
+            <div class="activity-badge warning">Medium Risk</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VERIFY ═══ -->
+  <section class="verify-section section" id="verify">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Document Intake</div>
+        <h2 class="section-title">Verify Document</h2>
+        <p class="section-desc">Upload a document for AI-powered multi-layer forensic analysis</p>
+      </div>
+
+      <div class="verify-layout">
+        <div class="upload-zone reveal" id="uploadZone">
+          <div class="upload-inner" id="uploadInner">
+            <div class="upload-icon-wrap">
+              <div class="upload-pulse"></div>
+              <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            </div>
+            <p class="upload-title">Drag & Drop Document Here</p>
+            <p class="upload-subtitle">or click to browse files</p>
+            <div class="upload-formats">
+              <span class="fmt-tag">PDF</span>
+              <span class="fmt-tag">JPG</span>
+              <span class="fmt-tag">PNG</span>
+            </div>
+            <p class="upload-limit">Maximum file size: 10MB · Encrypted in transit</p>
+          </div>
+          <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png" hidden />
+
+          <div class="uploaded-preview" id="uploadedPreview" style="display:none;">
+            <div class="preview-icon">📄</div>
+            <div class="preview-info">
+              <span class="preview-name" id="previewName">document.pdf</span>
+              <span class="preview-size" id="previewSize">2.4 MB</span>
+            </div>
+            <button class="preview-remove" id="previewRemove">✕</button>
+          </div>
+        </div>
+
+        <div class="verify-controls reveal">
+          <div class="control-group">
+            <label class="control-label">Document Type</label>
+            <div class="select-wrapper">
+              <select class="control-select" id="docType">
+                <option value="">— Select Document Type —</option>
+                <option value="income">Income Certificate</option>
+                <option value="caste">Caste Certificate</option>
+                <option value="degree">Degree Certificate</option>
+                <option value="domicile">Domicile Certificate</option>
+                <option value="marksheet10">10th Marksheet</option>
+                <option value="marksheet12">12th Marksheet</option>
+              </select>
+              <span class="select-arrow">▾</span>
+            </div>
+          </div>
+
+          <!-- Board Selection — shown only for marksheets -->
+          <div class="control-group board-group" id="boardGroup" style="display:none;">
+            <label class="control-label">Board of Education</label>
+            <div class="board-options">
+              <label class="board-option" id="boardCBSE">
+                <input type="radio" name="board" value="CBSE" />
+                <div class="board-card">
+                  <div class="board-logo cbse-logo">CBSE</div>
+                  <span class="board-name">Central Board of Secondary Education</span>
+                  <span class="board-short">CBSE · National</span>
+                </div>
+              </label>
+              <label class="board-option" id="boardMP">
+                <input type="radio" name="board" value="MP Board" />
+                <div class="board-card">
+                  <div class="board-logo mp-logo">MPBSE</div>
+                  <span class="board-name">Madhya Pradesh Board of Secondary Education</span>
+                  <span class="board-short">MPBSE · State</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Issuing State / UT</label>
+            <div class="select-wrapper">
+              <select class="control-select" id="issState">
+                <option value="">— Select State —</option>
+                <option>Maharashtra</option>
+                <option>Uttar Pradesh</option>
+                <option>Gujarat</option>
+                <option>Tamil Nadu</option>
+                <option>Karnataka</option>
+                <option>West Bengal</option>
+                <option>Rajasthan</option>
+                <option>Madhya Pradesh</option>
+              </select>
+              <span class="select-arrow">▾</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Analysis Mode</label>
+            <div class="mode-options">
+              <label class="mode-option">
+                <input type="radio" name="mode" value="standard" checked />
+                <span class="mode-label">Standard</span>
+              </label>
+              <label class="mode-option">
+                <input type="radio" name="mode" value="deep" />
+                <span class="mode-label">Deep Scan</span>
+              </label>
+              <label class="mode-option">
+                <input type="radio" name="mode" value="forensic" />
+                <span class="mode-label">Forensic</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="upload-actions">
+            <button class="btn btn-outline" id="uploadBtn">
+              <span>⬆</span> Upload
+            </button>
+            <button class="btn btn-primary" id="analyzeBtn">
+              <span>⬡</span> Start Analysis
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AI ANALYSIS ═══ -->
+  <section class="analysis-section section" id="analysis">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Forensic Engine</div>
+        <h2 class="section-title">AI Analysis Pipeline</h2>
+        <p class="section-desc">Neural forensic workflow — processing your document through 6 verification layers</p>
+      </div>
+
+      <div class="analysis-layout">
+        <div class="analysis-progress-panel reveal">
+          <div class="ap-header">
+            <span class="ap-title">Analysis Progress</span>
+            <span class="ap-pct" id="progressPct">0%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+            <div class="progress-glow"></div>
+          </div>
+          <p class="ap-status" id="apStatus">Awaiting document upload...</p>
+
+          <div class="analysis-steps" id="analysisSteps">
+            <div class="astep" data-step="0">
+              <div class="astep-icon pending">◌</div>
+              <div class="astep-info">
+                <span class="astep-name">OCR Extraction</span>
+                <span class="astep-desc">Optical character recognition & text layer parsing</span>
+              </div>
+              <div class="astep-status">—</div>
+            </div>
+            <div class="astep" data-step="1">
+              <div class="astep-icon pending">◌</div>
+              <div class="astep-info">
+                <span class="astep-name">Layout Detection</span>
+                <span class="astep-desc">Structural template matching against government formats</span>
+              </div>
+              <div class="astep-status">—</div>
+            </div>
+            <div class="astep" data-step="2">
+              <div class="astep-icon pending">◌</div>
+              <div class="astep-info">
+                <span class="astep-name">Font Verification</span>
+                <span class="astep-desc">Typeface fingerprinting & pixel-level analysis</span>
+              </div>
+              <div class="astep-status">—</div>
+            </div>
+            <div class="astep" data-step="3">
+              <div class="astep-icon pending">◌</div>
+              <div class="astep-info">
+                <span class="astep-name">Metadata Analysis</span>
+                <span class="astep-desc">EXIF, creation timestamps & modification history</span>
+              </div>
+              <div class="astep-status">—</div>
+            </div>
+            <div class="astep" data-step="4">
+              <div class="astep-icon pending">◌</div>
+              <div class="astep-info">
+                <span class="astep-name">QR / Roll Validation</span>
+                <span class="astep-desc">QR/barcode decode & board registry lookup</span>
+              </div>
+              <div class="astep-status">—</div>
+            </div>
+            <div class="astep" data-step="5">
+              <div class="astep-icon pending">◌</div>
+              <div class="astep-info">
+                <span class="astep-name">Forgery Detection</span>
+                <span class="astep-desc">GAN-based deepfake & tamper detection neural net</span>
+              </div>
+              <div class="astep-status">—</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="analysis-terminal reveal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="tdot red"></span>
+              <span class="tdot yellow"></span>
+              <span class="tdot green"></span>
+            </div>
+            <span class="terminal-title">fraudshield@forensics ~ neural-scan</span>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <div class="t-line prompt">> FraudShield AI Neural Engine v3.7.2</div>
+            <div class="t-line muted">> Forensic Analysis Module Ready</div>
+            <div class="t-line muted">> Awaiting document input...</div>
+            <div class="t-line cursor-line"><span class="cursor-blink">█</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RESULTS ═══ -->
+  <section class="results-section section" id="results">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Forensic Report</div>
+        <h2 class="section-title">Analysis Results</h2>
+        <p class="section-desc">Comprehensive AI verdict — document authenticity assessment</p>
+      </div>
+
+      <div class="results-layout">
+        <!-- Score Card -->
+        <div class="score-card reveal">
+          <div class="score-ring-container">
+            <svg class="score-ring" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" class="ring-bg"/>
+              <circle cx="60" cy="60" r="50" class="ring-fill" id="scoreRing"
+                stroke-dasharray="314"
+                stroke-dashoffset="314"/>
+            </svg>
+            <div class="score-center">
+              <span class="score-number" id="scoreNumber">—</span>
+              <span class="score-unit" id="scoreUnit">%</span>
+            </div>
+          </div>
+          <div class="score-label">Authenticity Score</div>
+          <div class="score-risk low" id="scoreRisk">
+            <span class="risk-dot"></span>
+            <span id="scoreRiskText">Awaiting Analysis</span>
+          </div>
+          <div class="score-meta">
+            <div class="smeta-item">
+              <span class="smeta-label">Document</span>
+              <span class="smeta-val" id="resMeta-doc">—</span>
+            </div>
+            <div class="smeta-item" id="metaBoardRow" style="display:none;">
+              <span class="smeta-label">Board</span>
+              <span class="smeta-val" id="resMeta-board">—</span>
+            </div>
+            <div class="smeta-item" id="metaRollRow" style="display:none;">
+              <span class="smeta-label">Roll Number</span>
+              <span class="smeta-val" id="resMeta-roll">—</span>
+            </div>
+            <div class="smeta-item" id="metaDobRow" style="display:none;">
+              <span class="smeta-label">Date of Birth</span>
+              <span class="smeta-val" id="resMeta-dob">—</span>
+            </div>
+            <div class="smeta-item">
+              <span class="smeta-label">Scan ID</span>
+              <span class="smeta-val" id="resMeta-id">—</span>
+            </div>
+            <div class="smeta-item">
+              <span class="smeta-label">Timestamp</span>
+              <span class="smeta-val" id="resMeta-time">—</span>
+            </div>
+          </div>
+          <button class="btn btn-primary full-width" id="downloadReport">⬇ Download Report</button>
+        </div>
+
+        <!-- Findings + AI Report -->
+        <div class="findings-panel reveal">
+          <h3 class="findings-title">Forensic Findings</h3>
+          <div class="findings-list" id="findingsList">
+            <!-- Populated dynamically -->
+            <div class="finding-placeholder">
+              <div class="placeholder-icon">◌</div>
+              <p>Run analysis to view forensic findings</p>
+            </div>
+          </div>
+
+          <!-- AI Report Section -->
+          <div class="ai-report-section" id="aiReportSection" style="display:none;">
+            <div class="ai-report-header">
+              <span class="ai-report-tag">AI Report</span>
+              <span class="ai-model-label">claude-sonnet · forensic-v3</span>
+            </div>
+            <div class="ai-report-body" id="aiReportBody"></div>
+          </div>
+
+          <div class="ai-verdict" id="aiVerdict">
+            <div class="verdict-header">AI Verdict</div>
+            <p class="verdict-text" id="verdictText">
+              Upload and analyze a document to receive the AI forensic verdict.
+            </p>
+            <div class="verdict-actions" id="verdictActions" style="display:none;">
+              <button class="btn btn-sm danger" id="flagReviewBtn">Flag for Review</button>
+              <button class="btn btn-sm outline" id="markVerifiedBtn">Mark Verified</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TEMPLATES & ANALYTICS ═══ -->
+  <section class="templates-section section" id="templates">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Document Intelligence</div>
+        <h2 class="section-title">Template Library & Analytics</h2>
+        <p class="section-desc">Reference templates and real-time fraud pattern intelligence</p>
+      </div>
+
+      <div class="templates-grid reveal">
+        <div class="template-card" data-type="income">
+          <div class="tc-header">
+            <div class="tc-seal"><div class="seal-mini outer"></div><div class="seal-mini inner"></div></div>
+            <div class="tc-badge">Active</div>
+          </div>
+          <h4 class="tc-title">Income Certificate</h4>
+          <p class="tc-desc">Annual income declaration from Tehsildar office. Validates income brackets for welfare eligibility.</p>
+          <div class="tc-stats"><span>342 scanned</span><span>28 flagged</span></div>
+          <div class="tc-footer">
+            <div class="tc-risk-bar"><div class="tc-risk-fill" style="width:62%; background: var(--orange)"></div></div>
+            <span class="tc-risk-label">Fraud Risk: 62%</span>
+          </div>
+        </div>
+
+        <div class="template-card" data-type="caste">
+          <div class="tc-header">
+            <div class="tc-seal"><div class="seal-mini outer"></div><div class="seal-mini inner"></div></div>
+            <div class="tc-badge">Active</div>
+          </div>
+          <h4 class="tc-title">Caste Certificate</h4>
+          <p class="tc-desc">SC/ST/OBC classification issued by SDM. Critical for educational and employment reservations.</p>
+          <div class="tc-stats"><span>219 scanned</span><span>41 flagged</span></div>
+          <div class="tc-footer">
+            <div class="tc-risk-bar"><div class="tc-risk-fill" style="width:78%; background: var(--danger)"></div></div>
+            <span class="tc-risk-label">Fraud Risk: 78%</span>
+          </div>
+        </div>
+
+        <div class="template-card" data-type="degree">
+          <div class="tc-header">
+            <div class="tc-seal"><div class="seal-mini outer"></div><div class="seal-mini inner"></div></div>
+            <div class="tc-badge">Active</div>
+          </div>
+          <h4 class="tc-title">Degree Certificate</h4>
+          <p class="tc-desc">University-issued academic qualification proof. Cross-referenced with DigiLocker and ABC ID.</p>
+          <div class="tc-stats"><span>178 scanned</span><span>9 flagged</span></div>
+          <div class="tc-footer">
+            <div class="tc-risk-bar"><div class="tc-risk-fill" style="width:31%; background: var(--success)"></div></div>
+            <span class="tc-risk-label">Fraud Risk: 31%</span>
+          </div>
+        </div>
+
+        <div class="template-card" data-type="domicile">
+          <div class="tc-header">
+            <div class="tc-seal"><div class="seal-mini outer"></div><div class="seal-mini inner"></div></div>
+            <div class="tc-badge">Active</div>
+          </div>
+          <h4 class="tc-title">Domicile Certificate</h4>
+          <p class="tc-desc">State residency proof issued by District Collector. Required for state-specific schemes and quotas.</p>
+          <div class="tc-stats"><span>97 scanned</span><span>6 flagged</span></div>
+          <div class="tc-footer">
+            <div class="tc-risk-bar"><div class="tc-risk-fill" style="width:24%; background: var(--success)"></div></div>
+            <span class="tc-risk-label">Fraud Risk: 24%</span>
+          </div>
+        </div>
+
+        <div class="template-card" data-type="marksheet10">
+          <div class="tc-header">
+            <div class="tc-seal"><div class="seal-mini outer"></div><div class="seal-mini inner"></div></div>
+            <div class="tc-badge new-badge">New</div>
+          </div>
+          <h4 class="tc-title">10th Marksheet</h4>
+          <p class="tc-desc">Secondary School Examination results issued by CBSE or State Boards. Validated against roll number registry.</p>
+          <div class="tc-stats"><span>86 scanned</span><span>4 flagged</span></div>
+          <div class="tc-footer">
+            <div class="tc-risk-bar"><div class="tc-risk-fill" style="width:18%; background: var(--success)"></div></div>
+            <span class="tc-risk-label">Fraud Risk: 18%</span>
+          </div>
+        </div>
+
+        <div class="template-card" data-type="marksheet12">
+          <div class="tc-header">
+            <div class="tc-seal"><div class="seal-mini outer"></div><div class="seal-mini inner"></div></div>
+            <div class="tc-badge new-badge">New</div>
+          </div>
+          <h4 class="tc-title">12th Marksheet</h4>
+          <p class="tc-desc">Higher Secondary Examination results from CBSE or MPBSE. Cross-verified with DigiLocker board records.</p>
+          <div class="tc-stats"><span>61 scanned</span><span>5 flagged</span></div>
+          <div class="tc-footer">
+            <div class="tc-risk-bar"><div class="tc-risk-fill" style="width:22%; background: var(--success)"></div></div>
+            <span class="tc-risk-label">Fraud Risk: 22%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="analytics-grid reveal">
+        <div class="analytics-card">
+          <h4 class="analytics-title">Fraud Detection Rate</h4>
+          <div class="analytics-chart bar-chart">
+            <div class="bar-group">
+              <div class="bar-wrap"><div class="bar" style="--h:45%; --c:var(--blue)"></div><span>Jan</span></div>
+              <div class="bar-wrap"><div class="bar" style="--h:60%; --c:var(--blue)"></div><span>Feb</span></div>
+              <div class="bar-wrap"><div class="bar" style="--h:38%; --c:var(--blue)"></div><span>Mar</span></div>
+              <div class="bar-wrap"><div class="bar" style="--h:72%; --c:var(--orange)"></div><span>Apr</span></div>
+              <div class="bar-wrap"><div class="bar" style="--h:55%; --c:var(--blue)"></div><span>May</span></div>
+              <div class="bar-wrap"><div class="bar" style="--h:88%; --c:var(--danger)"></div><span>Jun</span></div>
+            </div>
+          </div>
+          <p class="analytics-note">↑ 14.7% increase in fraud attempts this month</p>
+        </div>
+
+        <div class="analytics-card">
+          <h4 class="analytics-title">Verification Trend</h4>
+          <div class="analytics-chart line-chart">
+            <svg viewBox="0 0 300 120" class="line-svg">
+              <defs>
+                <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,90 L50,70 L100,80 L150,40 L200,55 L250,25 L300,35" fill="none" stroke="#3B82F6" stroke-width="2.5" class="trend-line"/>
+              <path d="M0,90 L50,70 L100,80 L150,40 L200,55 L250,25 L300,35 L300,120 L0,120Z" fill="url(#lineGrad)" class="trend-area"/>
+              <circle cx="50" cy="70" r="4" fill="#3B82F6"/>
+              <circle cx="150" cy="40" r="4" fill="#3B82F6"/>
+              <circle cx="250" cy="25" r="4" fill="#22C55E"/>
+            </svg>
+          </div>
+          <p class="analytics-note">↑ 31% more documents verified vs last quarter</p>
+        </div>
+
+        <div class="analytics-card highlight-card">
+          <h4 class="analytics-title">Most Common Fraud Types</h4>
+          <div class="fraud-types">
+            <div class="ft-item">
+              <div class="ft-label"><span class="ft-name">Font Manipulation</span><span class="ft-pct">42%</span></div>
+              <div class="ft-bar"><div class="ft-fill danger" style="width:42%"></div></div>
+            </div>
+            <div class="ft-item">
+              <div class="ft-label"><span class="ft-name">Metadata Tampering</span><span class="ft-pct">27%</span></div>
+              <div class="ft-bar"><div class="ft-fill orange" style="width:27%"></div></div>
+            </div>
+            <div class="ft-item">
+              <div class="ft-label"><span class="ft-name">Logo Substitution</span><span class="ft-pct">18%</span></div>
+              <div class="ft-bar"><div class="ft-fill yellow" style="width:18%"></div></div>
+            </div>
+            <div class="ft-item">
+              <div class="ft-label"><span class="ft-name">Layout Mismatch</span><span class="ft-pct">13%</span></div>
+              <div class="ft-bar"><div class="ft-fill blue" style="width:13%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="logo-icon"><span class="logo-shield">⬡</span></div>
+          <div class="logo-text">
+            <span class="logo-main">FraudShield</span>
+            <span class="logo-ai">AI</span>
+          </div>
+        </div>
+        <p class="footer-tagline">Protecting India's welfare ecosystem through AI-powered document forensics.</p>
+        <div class="footer-socials">
+          <a class="fsocial" href="#" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a class="fsocial" href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-col-title">Platform</h5>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#verify">Verify</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#templates">Templates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-col-title">Documents</h5>
+        <ul class="footer-links">
+          <li><a href="#">Income Certificate</a></li>
+          <li><a href="#">Caste Certificate</a></li>
+          <li><a href="#">Degree Certificate</a></li>
+          <li><a href="#">Domicile Certificate</a></li>
+          <li><a href="#">10th Marksheet</a></li>
+          <li><a href="#">12th Marksheet</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-col-title">Technology</h5>
+        <ul class="footer-links">
+          <li><a href="#">Neural OCR Engine</a></li>
+          <li><a href="#">GAN Forgery Detector</a></li>
+          <li><a href="#">Metadata Validator</a></li>
+          <li><a href="#">Roll Registry API</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 FraudShield AI · Built for National Hackathon · Protecting Government Welfare Integrity</p>
+      <p class="footer-disclaimer">For official use only · All document data encrypted & not stored</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
